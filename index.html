@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f3eb">
+  <meta name="description" content="Адилянын кыз узатуу тоюна чакыруу">
+  <title>Адилянын кыз узатуусу</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Фондук кооздук -->
+  <div class="background-ornament" aria-hidden="true">❦</div>
+
+  <!-- Музыка: конверт ачылганда башталат -->
+  <audio id="weddingMusic" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Биринчи экран: конверт -->
+  <section id="cover" class="cover">
+    <div class="cover-frame">
+      <div class="small-flower">❀</div>
+      <p class="eyebrow">Сүйүү менен даярдалган чакыруу</p>
+      <h1 class="cover-name">Адиля</h1>
+      <div class="gold-line"></div>
+      <p class="cover-subtitle">Кыз узатуу</p>
+
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter">
+          <span>Сизге</span>
+          <strong>чакыруу</strong>
+        </div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-seal">А</div>
+      </div>
+
+      <p class="cover-hint">Сизди кубанычыбызга ортоктош болууга чакырабыз</p>
+      <button id="openInvitation" class="gold-button">
+        Чакыруу барагын ачуу <span>♡</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Негизги чакыруу барагы -->
+  <main id="invitation" class="invitation hidden">
+
+    <header class="hero section">
+      <div class="flower-decoration">✿</div>
+      <p class="eyebrow">Ак тилек, ак бата менен</p>
+      <h1>Адиля</h1>
+      <p class="hero-subtitle">Кыз узатуу тою</p>
+      <div class="gold-line"></div>
+      <p class="hero-note">
+        Жашообуздагы өзгөчө күндү сиздер менен бирге өткөрүүнү каалайбыз.
+      </p>
+      <a href="#invitationText" class="scroll-cue">Төмөн караңыз <span>↓</span></a>
+    </header>
+
+    <!-- Сүрөттөр -->
+    <section class="section gallery-section">
+      <p class="eyebrow">Эсте калар көз ирмемдер</p>
+      <h2>Ак жол, Адиля!</h2>
+
+      <div class="photo-frame">
+        <img
+          id="slideshowImage"
+          src="assets/photo1.jpg"
+          alt="Кыз узатууга арналган сүрөт"
+        >
+        <div class="photo-caption">Сүйүү • Бакыт • Ак тилек</div>
+      </div>
+
+      <div class="gallery-controls">
+        <button id="prevPhoto" class="round-button" aria-label="Мурунку сүрөт">‹</button>
+        <div id="photoDots" class="photo-dots" aria-label="Сүрөт тандоо"></div>
+        <button id="nextPhoto" class="round-button" aria-label="Кийинки сүрөт">›</button>
+      </div>
+    </section>
+
+    <!-- Чакыруу сөзү -->
+    <section id="invitationText" class="section invitation-text">
+      <div class="ornament">❦</div>
+      <p class="eyebrow">Урматтуу туугандар, куда-сөөктөр, дос-жарандар!</p>
+      <h2>Сиздерди күтөбүз</h2>
+      <p>
+        Сиздерди сүйүктүү кызыбыз Адилянын кыз узатуу тоюна
+        чын жүрөктөн чакырабыз.
+      </p>
+      <p>
+        Бул кубанычтуу күнү биз менен бирге болуп, ак батаңыздарды
+        берип, кубанычыбызды тең бөлүшүп кетишиңиздерди каалайбыз.
+      </p>
+      <div class="ornament">❦</div>
+    </section>
+
+    <!-- Календарь -->
+    <section class="section date-section">
+      <p class="eyebrow">Той күнү</p>
+      <h2>Күнү жана убактысы</h2>
+
+      <div class="calendar-card">
+        <div class="calendar-month">ОКТЯБРЬ</div>
+        <div class="calendar-year">2026</div>
+        <div class="calendar-weekdays">
+          <span>Дш</span><span>Шш</span><span>Шр</span>
+          <span>Бш</span><span>Жм</span><span>Иш</span><span>Жк</span>
+        </div>
+        <div class="calendar-days">
+          <span> </span><span> </span><span> </span>
+          <span>1</span><span>2</span><span>3</span><span>4</span>
+          <span>5</span><span>6</span><span>7</span><span>8</span>
+          <span>9</span><span>10</span><span>11</span>
+          <span>12</span><span>13</span><span>14</span><span>15</span>
+          <span>16</span><span class="selected-day">17</span><span>18</span>
+          <span>19</span><span>20</span><span>21</span><span>22</span>
+          <span>23</span><span>24</span><span>25</span><span>26</span>
+          <span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+        </div>
+        <div class="calendar-footer">Ишемби • Саат 15:00</div>
+      </div>
+    </section>
+
+    <!-- Дарек -->
+    <section class="section location-section">
+      <p class="eyebrow">Той өтүүчү жер</p>
+      <h2>Дарегибиз</h2>
+      <div class="location-card">
+        <div class="location-icon">⌖</div>
+        <p class="location-village">Алыш айылы</p>
+        <p>Ыбырай Эсенаманов көчөсү, 29</p>
+        <p class="location-note">
+          Сиздерди үйүбүздө тосуп алууга кубанычтабыз.
+        </p>
+      </div>
+    </section>
+
+    <!-- Той ээлери -->
+    <section class="section hosts-section">
+      <div class="ornament">❀</div>
+      <p class="eyebrow">Терең урматтоо менен</p>
+      <h2>Той ээлери</h2>
+      <p class="hosts-names">Алмазбек <span>&</span> Гулбара</p>
+      <p class="closing-message">
+        Келип, ак батаңызды берип кетсеңиздер, биз үчүн чоң кубаныч!
+      </p>
+      <div class="gold-line"></div>
+      <p class="final-name">Адиля Кыз узатуусу</p>
+    </section>
+
+    <footer class="footer">
+      <p>Сүйүү менен даярдалды ♡</p>
+      <p>17 • 10 • 2026</p>
+    </footer>
+  </main>
+
+  <!-- Музыка башкаргычы -->
+  <button id="musicToggle" class="music-toggle hidden"
+          aria-label="Музыканы өчүрүү" title="Музыканы өчүрүү">
+    <span id="musicIcon">♫</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
